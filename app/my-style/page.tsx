@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Footer from "@/components/layout/Footer";
 import { Instagram, Youtube, ExternalLink } from "lucide-react";
 import { SOCIAL_LINKS } from "@/lib/constants";
 
@@ -301,6 +302,8 @@ export default function MyStylePage() {
           </motion.div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }

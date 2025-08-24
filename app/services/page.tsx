@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ServiceSlider from "@/components/sections/ServiceSlider";
+import Footer from "@/components/layout/Footer";
 
 export default function ServicesPage() {
   return (
@@ -57,6 +58,8 @@ export default function ServicesPage() {
           </motion.div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }

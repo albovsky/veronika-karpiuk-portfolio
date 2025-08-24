@@ -1,3 +1,5 @@
+import Footer from "@/components/layout/Footer";
+
 export default function PrivacyPage() {
   return (
     <div className="pt-16">
@@ -12,6 +14,8 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }

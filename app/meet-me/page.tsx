@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Testimonials from "@/components/sections/Testimonials";
+import Footer from "@/components/layout/Footer";
 import { Play, Award, Heart, Sparkles } from "lucide-react";
 
 export default function MeetMePage() {
@@ -257,6 +258,8 @@ export default function MeetMePage() {
           </motion.div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }

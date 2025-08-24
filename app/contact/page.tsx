@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import ContactForm from "@/components/forms/ContactForm";
+import Footer from "@/components/layout/Footer";
 
 export default function ContactPage() {
   return (
@@ -77,6 +78,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }

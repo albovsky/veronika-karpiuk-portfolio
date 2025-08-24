@@ -34,7 +34,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="min-h-screen bg-white py-12 pt-20 overflow-y-auto scroll-snap-align-start">
+    <section id="contact" className="min-h-screen bg-white py-12 pt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
