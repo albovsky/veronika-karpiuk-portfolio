@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -57,7 +58,7 @@ export default function Contact() {
             {/* Right side: Text right-aligned */}
             <div className="flex-1 pl-8">
               <p className="text-lg text-gray-600 leading-relaxed text-right" style={{ fontFamily: 'Satoshi, sans-serif' }}>
-                Tell me a little bit about yourself and service that you are looking to get. I'll make sure to reach out within next 24 hours so we could discuss our future collaboration. Can't wait to meet you!
+                Tell me a little bit about yourself and service that you are looking to get. I&apos;ll make sure to reach out within next 24 hours so we could discuss our future collaboration. Can&apos;t wait to meet you!
               </p>
             </div>
           </div>
@@ -167,11 +168,13 @@ export default function Contact() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="w-full h-[450px] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg overflow-hidden">
-              <img
+            <div className="w-full h-[450px] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg overflow-hidden relative">
+              <Image
                 src="/images/contact-image.webp"
                 alt="Contact Veronika Karpiuk"
-                className="w-full h-full object-cover object-top"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </motion.div>
