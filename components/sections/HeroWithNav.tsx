@@ -8,6 +8,7 @@ import { NAVIGATION_ITEMS } from "@/lib/constants";
 
 export default function HeroWithNav() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +45,7 @@ export default function HeroWithNav() {
   return (
     <>
       {/* Fullscreen Hero Section */}
-      <section className="relative h-screen flex flex-col justify-between overflow-hidden snap-section">
+      <section id="hero" className="relative h-screen flex flex-col justify-between overflow-hidden snap-section">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
@@ -74,7 +75,7 @@ export default function HeroWithNav() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="text-lg font-light mb-8"
+              className="text-xl font-light mb-8"
               style={{ fontFamily: 'Satoshi, sans-serif' }}
             >
               Helping women build confident, effortless style.
@@ -90,8 +91,8 @@ export default function HeroWithNav() {
             >
               <Button
                 asChild
-                className="bg-white hover:bg-white/90 text-sm rounded-xl font-light"
-                style={{ color: '#6C757D', paddingLeft: '12px', paddingRight: '12px', paddingTop: '22px', paddingBottom: '22px' }}
+                className="bg-white hover:bg-white/90 text-base rounded-xl font-light"
+                style={{ color: '#495057', paddingLeft: '12px', paddingRight: '12px', paddingTop: '22px', paddingBottom: '22px' }}
               >
                 <Link href="/services" className="flex items-center gap-2" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                   Explore Services
@@ -123,21 +124,21 @@ export default function HeroWithNav() {
         >
           <div className="flex items-center justify-center gap-16 px-8">
             {/* Navigation Links - Centered */}
-            <Link href="/" className="text-white hover:text-white/80 text-base font-light transition-colors duration-300">
+            <a href="#hero" className="text-white hover:text-white/80 text-base font-light transition-colors duration-300 cursor-pointer">
               Home
-            </Link>
-            <Link href="/services" className="text-white hover:text-white/80 text-base font-light transition-colors duration-300">
+            </a>
+            <a href="#services" className="text-white hover:text-white/80 text-base font-light transition-colors duration-300 cursor-pointer">
               Services
-            </Link>
-            <Link href="/meet-me" className="text-white hover:text-white/80 text-base font-light transition-colors duration-300">
+            </a>
+            <a href="#meet-me" className="text-white hover:text-white/80 text-base font-light transition-colors duration-300 cursor-pointer">
               Meet Me
-            </Link>
-            <Link href="/my-style" className="text-white hover:text-white/80 text-base font-light transition-colors duration-300">
+            </a>
+            <a href="#my-style" className="text-white hover:text-white/80 text-base font-light transition-colors duration-300 cursor-pointer">
               My Style
-            </Link>
-            <Link href="/contact" className="text-white hover:text-white/80 text-base font-light transition-colors duration-300">
+            </a>
+            <a href="#contact" className="text-white hover:text-white/80 text-base font-light transition-colors duration-300 cursor-pointer">
               Contact
-            </Link>
+            </a>
             
             {/* Work With Me Button */}
             <Button
@@ -145,7 +146,7 @@ export default function HeroWithNav() {
               className="bg-gradient-to-t from-black text-white hover:from-neutral-800 hover:to-neutral-500 rounded-xl px-4 py-7 text-base transition-all duration-300"
               style={{ fontFamily: 'Satoshi, sans-serif', borderWidth: '1px', borderColor: '#3f3f3f', backgroundImage: 'linear-gradient(to top, black, #404040)' }}
             >
-              <Link href="/contact">Work With Me</Link>
+              <a href="#contact">Work With Me</a>
             </Button>
           </div>
         </motion.nav>
@@ -174,17 +175,20 @@ export default function HeroWithNav() {
 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex items-center gap-8">
-                  {NAVIGATION_ITEMS.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
+                  <a href="#hero" className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors cursor-pointer">
+                    Home
+                  </a>
+                  <a href="#services" className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors cursor-pointer">
+                    Services
+                  </a>
+                  <a href="#meet-me" className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors cursor-pointer">
+                    Meet Me
+                  </a>
+                  <a href="#my-style" className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors cursor-pointer">
+                    My Style
+                  </a>
                   <Button asChild className="ml-4">
-                    <Link href="/contact">Work With Me</Link>
+                    <a href="#contact">Work With Me</a>
                   </Button>
                 </div>
 
@@ -193,6 +197,7 @@ export default function HeroWithNav() {
                   variant="ghost"
                   size="sm"
                   className="md:hidden"
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                   aria-label="Toggle navigation menu"
                 >
                   <svg
@@ -201,15 +206,73 @@ export default function HeroWithNav() {
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
+                    {isMobileMenuOpen ? (
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    ) : (
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 6h16M4 12h16M4 18h16"
+                      />
+                    )}
                   </svg>
                 </Button>
               </div>
+              
+              {/* Mobile Navigation Menu */}
+              <AnimatePresence>
+                {isMobileMenuOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="md:hidden border-t border-gray-200 bg-white/95 backdrop-blur-md"
+                  >
+                    <div className="px-4 py-6 space-y-4">
+                      <a 
+                        href="#hero" 
+                        className="block text-base font-medium text-gray-700 hover:text-gray-900 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Home
+                      </a>
+                      <a 
+                        href="#services" 
+                        className="block text-base font-medium text-gray-700 hover:text-gray-900 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Services
+                      </a>
+                      <a 
+                        href="#meet-me" 
+                        className="block text-base font-medium text-gray-700 hover:text-gray-900 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Meet Me
+                      </a>
+                      <a 
+                        href="#my-style" 
+                        className="block text-base font-medium text-gray-700 hover:text-gray-900 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        My Style
+                      </a>
+                      <Button asChild className="w-full mt-4">
+                        <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                          Work With Me
+                        </a>
+                      </Button>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </nav>
           </motion.header>
         )}

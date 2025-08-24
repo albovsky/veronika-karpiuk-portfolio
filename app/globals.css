@@ -19,6 +19,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Monumental';
+  src: url('/fonts/Monumental.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --font-family-sans: 'Inter', system-ui, sans-serif;
   
@@ -81,9 +89,14 @@ html {
 /* Snap scroll styles for hero page only */
 .snap-scroll-container {
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+}
+
+/* Prevent body scrolling when using snap-scroll */
+body:has(.snap-scroll-container) {
+  overflow: hidden;
 }
 
 .snap-section {

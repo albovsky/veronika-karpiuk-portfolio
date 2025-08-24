@@ -66,6 +66,27 @@ export const TESTIMONIALS = [
     role: "Medical Assistant",
     content: "I asked Veronika to create a winter work wardrobe, and she made the entire process effortless. She carefully considered my needs and preferences, and the PDF she provided included body type insights, a color palette, and curated shopping links.",
     rating: 5
+  },
+  {
+    id: 4,
+    name: "Maria",
+    role: "Marketing Manager",
+    content: "Veronika transformed my entire approach to dressing for work. Her seasonal capsule service gave me 30+ outfit combinations that feel both professional and authentically me. Getting dressed is now the easiest part of my morning routine!",
+    rating: 5
+  },
+  {
+    id: 5,
+    name: "Elena",
+    role: "Interior Designer",
+    content: "Working with Veronika was like having a best friend who truly understands style help me shop. She took the time to understand my lifestyle and created a wardrobe that works for both client meetings and creative work sessions.",
+    rating: 5
+  },
+  {
+    id: 6,
+    name: "Natasha",
+    role: "Tech Lead",
+    content: "I was skeptical about online styling, but Veronika's process was incredibly thorough. The wardrobe audit revealed so many pieces I'd forgotten about, and her styling tips helped me create looks I never thought possible with my existing clothes.",
+    rating: 5
   }
 ] as const;
 
