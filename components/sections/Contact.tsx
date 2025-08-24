@@ -6,7 +6,7 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SERVICES } from "@/lib/constants";
 
-export default function Contact() {
+export default function Contact(): JSX.Element {
   const [formData, setFormData] = useState({
     service: '',
     email: '',

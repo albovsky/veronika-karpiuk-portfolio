@@ -3,7 +3,6 @@ import { z } from "zod";
 
 const contactSchema = z.object({
   service: z.string().min(1),
-  name: z.string().min(2),
   email: z.string().email(),
   message: z.string().optional(),
   isHuman: z.boolean().refine((val) => val === true),
@@ -58,7 +57,6 @@ function generateEmailTemplate(data: z.infer<typeof contactSchema>) {
   return `
     <h2>New Contact Form Submission</h2>
     <p><strong>Service:</strong> ${data.service}</p>
-    <p><strong>Name:</strong> ${data.name}</p>
     <p><strong>Email:</strong> ${data.email}</p>
     ${data.message ? `<p><strong>Message:</strong><br>${data.message}</p>` : ''}
     <p><strong>Submitted at:</strong> ${new Date().toLocaleString()}</p>

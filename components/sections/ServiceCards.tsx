@@ -1,15 +1,15 @@
 "use client";
 
 import { useCallback, useEffect, useState } from 'react';
-import useEmblaCarousel from 'embla-carousel-react';
-import { motion } from "framer-motion";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react';
+import { Clock, DollarSign, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SERVICES } from "@/lib/constants";
-import { Clock, DollarSign, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
-export default function ServiceCards() {
+export default function ServiceCards(): JSX.Element {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     containScroll: 'trimSnaps',
@@ -29,7 +29,7 @@ export default function ServiceCards() {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
-  const onSelect = useCallback((emblaApi: any) => {
+  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
     setSelectedIndex(emblaApi.selectedScrollSnap());
     setPrevBtnDisabled(!emblaApi.canScrollPrev());
     setNextBtnDisabled(!emblaApi.canScrollNext());

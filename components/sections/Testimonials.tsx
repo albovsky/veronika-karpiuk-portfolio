@@ -1,13 +1,13 @@
 "use client";
 
 import { useCallback, useEffect, useState } from 'react';
-import useEmblaCarousel from 'embla-carousel-react';
 import { motion } from "framer-motion";
+import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react';
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { TESTIMONIALS } from "@/lib/constants";
-import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
-export default function Testimonials() {
+export default function Testimonials(): JSX.Element {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     containScroll: 'trimSnaps',
@@ -27,7 +27,7 @@ export default function Testimonials() {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
-  const onSelect = useCallback((emblaApi: any) => {
+  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
     setSelectedIndex(emblaApi.selectedScrollSnap());
     setPrevBtnDisabled(!emblaApi.canScrollPrev());
     setNextBtnDisabled(!emblaApi.canScrollNext());

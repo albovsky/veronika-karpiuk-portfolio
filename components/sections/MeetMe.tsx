@@ -27,7 +27,7 @@ const rightColumn2Boxes = [
   "Let's find your vibe, and build a wardrobe that finally feels like you."
 ];
 
-export default function MeetMe() {
+export default function MeetMe(): JSX.Element {
 
   return (
     <section id="meet-me" className="min-h-screen flex flex-col justify-center py-12 bg-white pt-20">

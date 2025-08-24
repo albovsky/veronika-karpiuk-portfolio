@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { NAVIGATION_ITEMS } from "@/lib/constants";
 
-export default function HeroWithNav() {
+export default function HeroWithNav(): JSX.Element {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

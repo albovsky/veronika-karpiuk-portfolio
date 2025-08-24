@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 
-export default function HearMeOut() {
+export default function HearMeOut(): JSX.Element {
   return (
     <section className="min-h-screen flex flex-col justify-center py-12 bg-white pt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

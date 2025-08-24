@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
 
-export default function MyStyle() {
+export default function MyStyle(): JSX.Element {
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Placeholder photos - will be replaced with actual images
