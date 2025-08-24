@@ -3,7 +3,8 @@
 import { useCallback, useEffect, useState } from 'react';
 import Link from "next/link";
 import { motion } from "framer-motion";
-import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react';
+import useEmblaCarousel from 'embla-carousel-react';
+import type { EmblaCarouselType } from 'embla-carousel';
 import { Clock, DollarSign, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";

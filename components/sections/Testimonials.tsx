@@ -2,7 +2,8 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { motion } from "framer-motion";
-import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react';
+import useEmblaCarousel from 'embla-carousel-react';
+import type { EmblaCarouselType } from 'embla-carousel';
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { TESTIMONIALS } from "@/lib/constants";
