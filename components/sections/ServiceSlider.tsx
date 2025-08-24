@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SERVICES } from "@/lib/constants";
 
-export default function ServiceSlider(): JSX.Element {
+export default function ServiceSlider() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     containScroll: 'trimSnaps',

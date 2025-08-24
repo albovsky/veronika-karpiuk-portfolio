@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { TESTIMONIALS } from "@/lib/constants";
 
-export default function Testimonials(): JSX.Element {
+export default function Testimonials() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     containScroll: 'trimSnaps',

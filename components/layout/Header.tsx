@@ -13,11 +13,6 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
-  
-  // Don't show header on homepage since it has HeroWithNav
-  if (pathname === "/") {
-    return null;
-  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,6 +34,11 @@ export default function Header() {
       document.body.style.overflow = "unset";
     };
   }, [isOpen]);
+  
+  // Don't show header on homepage since it has HeroWithNav
+  if (pathname === "/") {
+    return null;
+  }
 
   return (
     <header
