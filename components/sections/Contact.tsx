@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { SERVICES } from "@/lib/constants";
 import Footer from "@/components/layout/Footer";
 
-export default function Contact(): JSX.Element {
+export default function Contact() {
   const [formData, setFormData] = useState({
     service: '',
     email: '',

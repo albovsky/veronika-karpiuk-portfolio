@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Instagram, Youtube, Send } from "lucide-react";
 import { NAVIGATION_ITEMS, SOCIAL_LINKS } from "@/lib/constants";
 
-export default function Footer(): JSX.Element {
+export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (

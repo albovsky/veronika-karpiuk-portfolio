@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
 
-export default function MyStyle(): JSX.Element {
+export default function MyStyle() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Gallery photos
