@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SERVICES } from "@/lib/constants";
+import Footer from "@/components/layout/Footer";
 
 export default function Contact(): JSX.Element {
   const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ export default function Contact(): JSX.Element {
   };
 
   return (
-    <section id="contact" className="min-h-screen flex flex-col justify-center py-12 bg-white pt-20">
+    <section id="contact" className="min-h-screen bg-white py-12 pt-20 overflow-y-auto scroll-snap-align-start">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -176,6 +177,9 @@ export default function Contact(): JSX.Element {
           </motion.div>
         </div>
       </div>
+      
+      {/* Footer integrated into Contact section */}
+      <Footer />
     </section>
   );
 }

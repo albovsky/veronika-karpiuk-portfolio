@@ -1,17 +1,18 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
 
 export default function MyStyle(): JSX.Element {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  // Placeholder photos - will be replaced with actual images
-  const photos = Array.from({ length: 20 }, (_, i) => ({
+  // Gallery photos
+  const photos = Array.from({ length: 9 }, (_, i) => ({
     id: i + 1,
-    src: `/images/style/style-${i + 1}.jpg`,
-    alt: `Style photo ${i + 1}`
+    src: `/images/gallery-photo-${i + 1}.webp`,
+    alt: `Gallery photo ${i + 1}`
   }));
 
   return (
@@ -54,123 +55,155 @@ export default function MyStyle(): JSX.Element {
 
           {/* Photo Grid */}
           <div className="relative">
-            <div 
-              className={`grid grid-cols-4 gap-4 ${
-                isExpanded ? 'pb-20' : ''
-              }`}
-            >
+            <div className="grid grid-cols-4 gap-4">
               {/* Column 1 */}
-              <div className="flex flex-col gap-4 h-[600px]">
+              <div className="flex flex-col gap-4 h-[500px]">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
-                  className="flex-[2] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg overflow-hidden"
+                  className="flex-[2] rounded-lg overflow-hidden relative"
                 >
-                  <div className="w-full h-full flex items-center justify-center">
-                    <span className="text-gray-500 text-sm">Photo 1</span>
-                  </div>
+                  <Image
+                    src={photos[0].src}
+                    alt={photos[0].alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
                   viewport={{ once: true }}
-                  className="flex-[3] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg overflow-hidden"
+                  className="flex-[3] rounded-lg overflow-hidden relative"
                 >
-                  <div className="w-full h-full flex items-center justify-center">
-                    <span className="text-gray-500 text-sm">Photo 2</span>
-                  </div>
+                  <Image
+                    src={photos[1].src}
+                    alt={photos[1].alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
                 </motion.div>
               </div>
 
               {/* Column 2 */}
-              <div className="flex flex-col gap-4 h-[600px]">
+              <div className="flex flex-col gap-4 h-[500px]">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
-                  className="flex-[3] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg overflow-hidden"
+                  className="flex-[3] rounded-lg overflow-hidden relative"
                 >
-                  <div className="w-full h-full flex items-center justify-center">
-                    <span className="text-gray-500 text-sm">Photo 3</span>
-                  </div>
+                  <Image
+                    src={photos[2].src}
+                    alt={photos[2].alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                   viewport={{ once: true }}
-                  className="flex-[2] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg overflow-hidden"
+                  className="flex-[2] rounded-lg overflow-hidden relative"
                 >
-                  <div className="w-full h-full flex items-center justify-center">
-                    <span className="text-gray-500 text-sm">Photo 4</span>
-                  </div>
+                  <Image
+                    src={photos[3].src}
+                    alt={photos[3].alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
                 </motion.div>
               </div>
 
               {/* Column 3 */}
-              <div className="flex flex-col gap-4 h-[600px]">
+              <div className="flex flex-col gap-4 h-[500px]">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                   viewport={{ once: true }}
-                  className="flex-[1] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg overflow-hidden"
+                  className="flex-[1] rounded-lg overflow-hidden relative"
                 >
-                  <div className="w-full h-full flex items-center justify-center">
-                    <span className="text-gray-500 text-sm">Photo 5</span>
-                  </div>
+                  <Image
+                    src={photos[4].src}
+                    alt={photos[4].alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                   viewport={{ once: true }}
-                  className="flex-[2] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg overflow-hidden"
+                  className="flex-[2] rounded-lg overflow-hidden relative"
                 >
-                  <div className="w-full h-full flex items-center justify-center">
-                    <span className="text-gray-500 text-sm">Photo 6</span>
-                  </div>
+                  <Image
+                    src={photos[5].src}
+                    alt={photos[5].alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
                   viewport={{ once: true }}
-                  className="flex-[2] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg overflow-hidden"
+                  className="flex-[2] rounded-lg overflow-hidden relative"
                 >
-                  <div className="w-full h-full flex items-center justify-center">
-                    <span className="text-gray-500 text-sm">Photo 7</span>
-                  </div>
+                  <Image
+                    src={photos[6].src}
+                    alt={photos[6].alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
                 </motion.div>
               </div>
 
               {/* Column 4 */}
-              <div className="flex flex-col gap-4 h-[600px]">
+              <div className="flex flex-col gap-4 h-[500px]">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.7 }}
                   viewport={{ once: true }}
-                  className="flex-[4] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg overflow-hidden"
+                  className="flex-[4] rounded-lg overflow-hidden relative"
                 >
-                  <div className="w-full h-full flex items-center justify-center">
-                    <span className="text-gray-500 text-sm">Photo 8</span>
-                  </div>
+                  <Image
+                    src={photos[7].src}
+                    alt={photos[7].alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.8 }}
                   viewport={{ once: true }}
-                  className="flex-[1] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg overflow-hidden"
+                  className="flex-[1] rounded-lg overflow-hidden relative"
                 >
-                  <div className="w-full h-full flex items-center justify-center">
-                    <span className="text-gray-500 text-sm">Photo 9</span>
-                  </div>
+                  <Image
+                    src={photos[8].src}
+                    alt={photos[8].alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
                 </motion.div>
               </div>
             </div>
@@ -179,33 +212,36 @@ export default function MyStyle(): JSX.Element {
             {!isExpanded && (
               <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
             )}
+
+            {/* Expand Button Overlay (only when collapsed) */}
+            {!isExpanded && (
+              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10">
+                <button
+                  onClick={() => setIsExpanded(true)}
+                  className="bg-black text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-gray-800 transition-colors duration-300 shadow-lg"
+                  style={{ fontFamily: 'Satoshi, sans-serif' }}
+                >
+                  Expand
+                  <ChevronDown size={16} />
+                </button>
+              </div>
+            )}
           </div>
         </div>
 
-        {/* Expand/Collapse Button */}
-        <div className={`${
-          isExpanded 
-            ? 'fixed bottom-6 left-1/2 transform -translate-x-1/2 z-10' 
-            : 'absolute bottom-6 left-1/2 transform -translate-x-1/2'
-        }`}>
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="bg-black text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-gray-800 transition-colors duration-300 shadow-lg"
-            style={{ fontFamily: 'Satoshi, sans-serif' }}
-          >
-            {isExpanded ? (
-              <>
-                Collapse
-                <ChevronUp size={16} />
-              </>
-            ) : (
-              <>
-                Expand
-                <ChevronDown size={16} />
-              </>
-            )}
-          </button>
-        </div>
+        {/* Collapse Button (only when expanded) */}
+        {isExpanded && (
+          <div className="flex justify-center py-8 pb-32">
+            <button
+              onClick={() => setIsExpanded(false)}
+              className="bg-black text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-gray-800 transition-colors duration-300 shadow-lg"
+              style={{ fontFamily: 'Satoshi, sans-serif' }}
+            >
+              Collapse
+              <ChevronUp size={16} />
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
