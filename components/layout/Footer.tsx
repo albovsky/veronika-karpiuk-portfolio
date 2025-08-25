@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-white text-gray-900 relative overflow-hidden pb-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 mb-16 md:mb-20">
           {/* Menu Section */}
           <div>
             <h3 className="text-lg font-medium text-gray-900 mb-6" style={{ fontFamily: 'Satoshi, sans-serif' }}>
@@ -66,7 +66,7 @@ export default function Footer() {
         <div 
           className="select-none pointer-events-none py-8 -mx-4 sm:-mx-6 lg:-mx-8"
           style={{ 
-            fontSize: 'clamp(3rem, 15vw, 10rem)',
+            fontSize: 'clamp(2rem, 12vw, 10rem)',
             lineHeight: '0.8',
             fontFamily: 'CMGeom, serif',
             color: 'rgba(0, 0, 0, 0.03)'
@@ -80,13 +80,13 @@ export default function Footer() {
         </div>
 
         {/* Copyright and Social Section */}
-        <div className="flex flex-col sm:flex-row justify-between items-center pt-4">
+        <div className="flex flex-col sm:flex-row justify-between items-center pt-4 text-center sm:text-left">
           <p className="text-gray-500 text-sm mb-4 sm:mb-0" style={{ fontFamily: 'Satoshi, sans-serif' }}>
             © {currentYear} Veronika Karpiuk. All rights reserved.
           </p>
           
           {/* Social Links */}
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 justify-center sm:justify-start">
             <a
               href={SOCIAL_LINKS.instagram}
               target="_blank"

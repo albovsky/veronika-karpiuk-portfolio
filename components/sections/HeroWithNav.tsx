@@ -59,13 +59,13 @@ export default function HeroWithNav() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black z-10" />
 
         {/* Main Content - Lower */}
-        <div className="relative z-20 flex-1 flex items-start justify-center px-4 sm:px-6 lg:px-8" style={{paddingTop: '50vh'}}>
+        <div className="relative z-20 flex-1 flex items-start justify-center px-6 sm:px-6 lg:px-8" style={{paddingTop: '45vh'}}>
           <div className="text-center text-white max-w-4xl mx-auto">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className="text-5xl sm:text-6xl md:text-7xl font-light tracking-wide mb-6"
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-wide mb-6"
               style={{ fontFamily: 'CMGeom, serif' }}
             >
               Veronika Karpiuk
@@ -75,7 +75,7 @@ export default function HeroWithNav() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="text-xl font-light mb-8"
+              className="text-lg sm:text-xl font-light mb-8"
               style={{ fontFamily: 'Satoshi, sans-serif' }}
             >
               Helping women build confident, effortless style.
@@ -91,7 +91,7 @@ export default function HeroWithNav() {
             >
               <Button
                 asChild
-                className="bg-white hover:bg-white/90 text-base rounded-xl font-light"
+                className="bg-white hover:bg-white/90 text-base rounded-xl font-light w-full sm:w-auto"
                 style={{ color: '#495057', paddingLeft: '12px', paddingRight: '12px', paddingTop: '22px', paddingBottom: '22px' }}
               >
                 <Link href="/services" className="flex items-center gap-2" style={{ fontFamily: 'Satoshi, sans-serif' }}>
@@ -120,9 +120,9 @@ export default function HeroWithNav() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="absolute bottom-20 left-0 right-0 z-20"
+          className="absolute bottom-20 left-0 right-0 z-20 hidden md:block"
         >
-          <div className="flex items-center justify-center gap-16 px-8">
+          <div className="flex items-center justify-center gap-8 lg:gap-16 px-8">
             {/* Navigation Links - Centered */}
             <a href="#hero" className="text-white hover:text-white/80 text-base font-light transition-colors duration-300 cursor-pointer">
               Home

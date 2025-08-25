@@ -32,12 +32,12 @@ export default function MyStyle() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-5xl sm:text-6xl font-light text-gray-900 mb-2" style={{ fontFamily: 'CMGeom, serif' }}>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-2" style={{ fontFamily: 'CMGeom, serif' }}>
               My Style
             </h2>
             <div className="flex items-start justify-between">
               {/* Left side: Line with arrow circle */}
-              <div className="flex items-center w-2/5">
+              <div className="hidden sm:flex items-center sm:w-2/5">
                 <div className="flex-1 h-px bg-gray-300"></div>
                 <div className="w-8 h-8 rounded-full border-2 border-orange-200 flex items-center justify-center ml-4 flex-shrink-0">
                   <ArrowRight size={14} className="text-orange-400" />
@@ -45,8 +45,8 @@ export default function MyStyle() {
               </div>
               
               {/* Right side: Text right-aligned */}
-              <div className="w-3/5 pl-8">
-                <p className="text-lg text-gray-600 leading-relaxed text-right" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+              <div className="w-full sm:w-3/5 sm:pl-8">
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed text-left sm:text-right" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                   Get to know the stylist behind the services. My approach blends body analysis, creativity, and effortless styling to help you feel confident and authentic - every time you get dressed.
                 </p>
               </div>
@@ -55,9 +55,9 @@ export default function MyStyle() {
 
           {/* Photo Grid */}
           <div className="relative">
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {/* Column 1 */}
-              <div className="flex flex-col gap-4 h-[500px]">
+              <div className="flex flex-col gap-4 h-[300px] md:h-[400px] lg:h-[500px]">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ export default function MyStyle() {
               </div>
 
               {/* Column 2 */}
-              <div className="flex flex-col gap-4 h-[500px]">
+              <div className="flex flex-col gap-4 h-[300px] md:h-[400px] lg:h-[500px]">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -125,7 +125,7 @@ export default function MyStyle() {
               </div>
 
               {/* Column 3 */}
-              <div className="flex flex-col gap-4 h-[500px]">
+              <div className="flex flex-col gap-4 h-[300px] md:h-[400px] lg:h-[500px]">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -174,7 +174,7 @@ export default function MyStyle() {
               </div>
 
               {/* Column 4 */}
-              <div className="flex flex-col gap-4 h-[500px]">
+              <div className="flex flex-col gap-4 h-[300px] md:h-[400px] lg:h-[500px]">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -218,7 +218,7 @@ export default function MyStyle() {
               <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10">
                 <button
                   onClick={() => setIsExpanded(true)}
-                  className="bg-black text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-gray-800 transition-colors duration-300 shadow-lg"
+                  className="bg-black text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full flex items-center gap-2 hover:bg-gray-800 transition-colors duration-300 shadow-lg text-sm sm:text-base"
                   style={{ fontFamily: 'Satoshi, sans-serif' }}
                 >
                   Expand

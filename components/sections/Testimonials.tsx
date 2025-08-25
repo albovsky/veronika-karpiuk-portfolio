@@ -43,21 +43,21 @@ export default function Testimonials() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section id="testimonials" className="min-h-screen flex flex-col justify-center py-8 bg-white pt-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="min-h-screen flex flex-col justify-center py-8 sm:py-12 bg-white pt-12 sm:pt-16">
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mb-12"
+          className="mb-8 sm:mb-12"
         >
-          <h2 className="text-5xl sm:text-6xl font-light text-gray-900 mb-2" style={{ fontFamily: 'CMGeom, serif' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-2" style={{ fontFamily: 'CMGeom, serif' }}>
             In Their Words
           </h2>
           <div className="flex items-start justify-between">
             {/* Left side: Line with arrow circle */}
-            <div className="flex items-center w-2/5">
+            <div className="hidden sm:flex items-center sm:w-2/5">
               <div className="flex-1 h-px bg-gray-300"></div>
               <div className="w-8 h-8 rounded-full border-2 border-orange-200 flex items-center justify-center ml-4 flex-shrink-0">
                 <ArrowRight size={14} className="text-orange-400" />
@@ -65,8 +65,8 @@ export default function Testimonials() {
             </div>
             
             {/* Right side: Text right-aligned */}
-            <div className="w-3/5 pl-8">
-              <p className="text-lg text-gray-600 leading-relaxed text-right" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+            <div className="w-full sm:w-3/5 sm:pl-8">
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed text-left sm:text-right" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                 The best part of my work isn't just creating wardrobes - it's seeing the confidence
                 and ease it brings to women's lives. Here are a few stories from clients who
                 rediscovered their style and made getting dressed feel effortless again.
@@ -75,8 +75,8 @@ export default function Testimonials() {
           </div>
         </motion.div>
 
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex gap-6">
+        <div className="overflow-hidden -mx-4 px-4" ref={emblaRef}>
+          <div className="flex gap-3 sm:gap-6">
             {TESTIMONIALS.map((testimonial, index) => (
               <motion.div
                 key={testimonial.id}
@@ -84,10 +84,10 @@ export default function Testimonials() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex-[0_0_95%] sm:flex-[0_0_60%] lg:flex-[0_0_40%] xl:flex-[0_0_32%] min-w-0 pr-4"
+                className="flex-[0_0_85%] sm:flex-[0_0_60%] lg:flex-[0_0_40%] xl:flex-[0_0_32%] min-w-0 pr-3 sm:pr-4"
               >
                 <Card className="h-full hover:shadow-lg transition-shadow duration-300 bg-gray-100">
-                  <CardContent className="px-6 py-2 h-full flex flex-col">
+                  <CardContent className="px-4 sm:px-6 py-4 sm:py-6 h-full flex flex-col">
                     {/* Profile Photo */}
                     <div className="flex justify-start mb-6">
                       <img

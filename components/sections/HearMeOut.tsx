@@ -15,13 +15,13 @@ export default function HearMeOut() {
           className="text-center space-y-4"
         >
           <div className="flex flex-col items-center space-y-2">
-            <p className="text-lg text-gray-600 leading-relaxed" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed" style={{ fontFamily: 'Satoshi, sans-serif' }}>
               I know you might still have questions about how this works, what to expect, 
               or if it's really for you - so...
             </p>
           </div>
           
-          <h2 className="text-5xl sm:text-6xl font-light text-gray-900" style={{ fontFamily: 'CMGeom, serif' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-900" style={{ fontFamily: 'CMGeom, serif' }}>
             Hear Me Out
           </h2>
           
@@ -43,10 +43,10 @@ export default function HearMeOut() {
             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
             {/* Play Button and Text Overlay */}
             <div className="text-center space-y-6 relative z-10">
-              <div className="w-24 h-24 bg-white/90 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md">
-                <Play size={40} className="text-gray-700 ml-1" />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-white/90 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md">
+                <Play size={24} className="text-gray-700 ml-1 sm:w-8 sm:h-8 md:w-10 md:h-10" />
               </div>
-              <p className="text-white font-medium text-xl drop-shadow-lg" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+              <p className="text-white font-medium text-lg sm:text-xl drop-shadow-lg" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                 Watch My Story
               </p>
             </div>

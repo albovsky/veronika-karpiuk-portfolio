@@ -34,7 +34,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="min-h-screen bg-white py-12 pt-20">
+    <section id="contact" className="min-h-screen bg-white py-8 md:py-12 pt-16 md:pt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -43,12 +43,12 @@ export default function Contact() {
           viewport={{ once: true }}
           className="mb-6"
         >
-          <h2 className="text-5xl sm:text-6xl font-light text-gray-900 mb-2" style={{ fontFamily: 'CMGeom, serif' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-2" style={{ fontFamily: 'CMGeom, serif' }}>
             Contact
           </h2>
           <div className="flex items-start justify-between">
             {/* Left side: Line with arrow circle */}
-            <div className="flex items-center w-2/5">
+            <div className="hidden sm:flex items-center sm:w-2/5">
               <div className="flex-1 h-px bg-gray-300"></div>
               <div className="w-8 h-8 rounded-full border-2 border-orange-200 flex items-center justify-center ml-4 flex-shrink-0">
                 <ArrowRight size={14} className="text-orange-400" />
@@ -56,8 +56,8 @@ export default function Contact() {
             </div>
             
             {/* Right side: Text right-aligned */}
-            <div className="flex-1 pl-8">
-              <p className="text-lg text-gray-600 leading-relaxed text-right" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+            <div className="w-full sm:flex-1 sm:pl-8">
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed text-left sm:text-right" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                 Tell me a little bit about yourself and service that you are looking to get. I&apos;ll make sure to reach out within next 24 hours so we could discuss our future collaboration. Can&apos;t wait to meet you!
               </p>
             </div>
@@ -65,7 +65,7 @@ export default function Contact() {
         </motion.div>
 
         {/* Contact Form and Image */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left side - Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -152,7 +152,7 @@ export default function Contact() {
               {/* Submit Button */}
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-t from-black text-white hover:from-neutral-800 hover:to-neutral-500 rounded-xl py-6 text-base transition-all duration-300"
+                className="w-full bg-gradient-to-t from-black text-white hover:from-neutral-800 hover:to-neutral-500 rounded-xl py-4 sm:py-6 text-base transition-all duration-300"
                 style={{ fontFamily: 'Satoshi, sans-serif', borderWidth: '1px', borderColor: '#3f3f3f', backgroundImage: 'linear-gradient(to top, black, #404040)' }}
               >
                 Work With Me
@@ -168,7 +168,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="w-full h-[450px] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg overflow-hidden relative">
+            <div className="w-full h-[300px] sm:h-[400px] lg:h-[450px] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg overflow-hidden relative">
               <Image
                 src="/images/contact-image.webp"
                 alt="Contact Veronika Karpiuk"

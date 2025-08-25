@@ -86,7 +86,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Snap scroll styles for hero page only */
+/* Snap scroll styles */
 .snap-scroll-container {
   height: 100vh;
   overflow-y: auto;
@@ -99,10 +99,30 @@ body:has(.snap-scroll-container) {
   overflow: hidden;
 }
 
-.snap-section {
-  min-height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+/* Desktop: Full snap behavior */
+@media (min-width: 768px) {
+  .snap-section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
+/* Mobile: No snapping */
+@media (max-width: 767px) {
+  .snap-scroll-container {
+    height: auto; /* Allow natural height */
+    scroll-snap-type: none; /* Remove all snapping */
+  }
+  
+  body:has(.snap-scroll-container) {
+    overflow: auto; /* Allow body scrolling */
+  }
+  
+  .snap-section {
+    scroll-snap-align: none;
+    min-height: auto; /* Allow natural height */
+  }
 }
 
 /* Ensure footer doesn't snap */
