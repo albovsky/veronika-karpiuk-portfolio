@@ -1,0 +1,113 @@
+/* Custom Button Styles */
+
+/* Default Primary Button */
+.btn-primary-default {
+  display: inline-flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #323232 0%, #0D0D0D 100%);
+  box-shadow: 
+    0 0 0 1px #333, 
+    0 2px 4px -1px rgba(0, 0, 0, 0.30), 
+    0 0.5px 1px 0 rgba(255, 255, 255, 0.15) inset, 
+    0 -1px 1.2px 0 #121212 inset;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  height: 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Primary Button Hover State */
+.btn-primary-default::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.32) 0%, rgba(255, 255, 255, 0.10) 100%);
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+  pointer-events: none;
+}
+
+.btn-primary-default:hover::before {
+  opacity: 1;
+}
+
+/* Disabled Button */
+.btn-disabled {
+  display: inline-flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: #E0E0E0;
+  color: #999;
+  border: none;
+  cursor: not-allowed;
+  transition: all 200ms ease-out;
+}
+
+.btn-disabled:hover {
+  background: #E0E0E0;
+}
+
+/* Alternative class names for flexibility */
+.btn-primary {
+  display: inline-flex !important;
+  padding: 16px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 12px !important;
+  background: linear-gradient(180deg, #323232 0%, #0D0D0D 100%) !important;
+  box-shadow: 
+    0 0 0 1px #333, 
+    0 2px 4px -1px rgba(0, 0, 0, 0.30), 
+    0 0.5px 1px 0 rgba(255, 255, 255, 0.15) inset, 
+    0 -1px 1.2px 0 #121212 inset !important;
+  color: white !important;
+  border: none !important;
+  cursor: pointer;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  height: 56px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.32) 0%, rgba(255, 255, 255, 0.10) 100%);
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+  pointer-events: none;
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-primary:disabled {
+  background: #E0E0E0;
+  color: #999;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-primary:disabled:hover {
+  background: #E0E0E0;
+}

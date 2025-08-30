@@ -143,8 +143,9 @@ export default function HeroWithNav() {
             {/* Work With Me Button */}
             <Button
               asChild
-              className="bg-gradient-to-t from-black text-white hover:from-neutral-800 hover:to-neutral-500 rounded-xl px-4 py-7 text-base transition-all duration-300"
-              style={{ fontFamily: 'Satoshi, sans-serif', borderWidth: '1px', borderColor: '#3f3f3f', backgroundImage: 'linear-gradient(to top, black, #404040)' }}
+              variant="ghost"
+              className="btn-primary text-base"
+              style={{ fontFamily: 'Satoshi, sans-serif', lineHeight: '24px' }}
             >
               <a href="#contact">Work With Me</a>
             </Button>
@@ -187,7 +188,7 @@ export default function HeroWithNav() {
                   <a href="#my-style" className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors cursor-pointer">
                     My Style
                   </a>
-                  <Button asChild className="ml-4">
+                  <Button asChild variant="ghost" className="btn-primary ml-4">
                     <a href="#contact">Work With Me</a>
                   </Button>
                 </div>
@@ -264,7 +265,7 @@ export default function HeroWithNav() {
                       >
                         My Style
                       </a>
-                      <Button asChild className="w-full mt-4">
+                      <Button asChild variant="ghost" className="btn-primary w-full mt-4">
                         <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
                           Work With Me
                         </a>
