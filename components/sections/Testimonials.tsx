@@ -121,7 +121,7 @@ export default function Testimonials() {
         {/* Navigation Arrows */}
         <div className="flex justify-end gap-2 mt-4">
           <button
-            className={`p-3 rounded-full border ${
+            className={`p-4 rounded-2xl border ${
               prevBtnDisabled 
                 ? 'bg-gray-100 border-gray-200 text-gray-400 cursor-not-allowed' 
                 : 'bg-white border-gray-300 text-gray-700 hover:bg-gray-50'
@@ -132,7 +132,7 @@ export default function Testimonials() {
             <ChevronLeft size={20} />
           </button>
           <button
-            className={`p-3 rounded-full border ${
+            className={`p-4 rounded-2xl border ${
               nextBtnDisabled 
                 ? 'bg-gray-100 border-gray-200 text-gray-400 cursor-not-allowed' 
                 : 'bg-white border-gray-300 text-gray-700 hover:bg-gray-50'
